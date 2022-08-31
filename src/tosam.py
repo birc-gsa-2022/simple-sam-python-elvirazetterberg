@@ -7,7 +7,7 @@ def main():
         type=argparse.FileType('r')
     )
     args = argparser.parse_args()
-    print(args)
+    # print(args)
     for line in args.mas:
         chrom, read_name, read_str, pos = line.split('\t')
 
