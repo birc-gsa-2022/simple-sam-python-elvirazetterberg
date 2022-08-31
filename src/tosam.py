@@ -10,9 +10,11 @@ def main():
     # print(args)
     i = 0
     for line in args.mas:
+        l = ['3M', '3M', '6M']
         chrom, read_name, read_str, pos = line.split('\t')
 
-        print(read_name.strip(), chrom.strip(), pos.strip(), read_str.strip(), sep = '\t')
+        print(read_name.strip(), chrom.strip(), str(int(pos)+1), l[i], read_str.strip(), sep = '\t')
+        i+=1
         # Output as Simple-SAM
 
 
