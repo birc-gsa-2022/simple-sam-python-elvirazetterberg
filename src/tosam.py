@@ -11,7 +11,7 @@ def main():
     for line in args.mas:
         chrom, read_name, read_str, pos = line.split('\t')
 
-        print(read_name, chrom, pos.strip(), read_str, sep = '\t')
+        print(read_name.strip(), chrom.strip(), pos.strip(), read_str.strip(), sep = '\t')
         # Output as Simple-SAM
 
 
