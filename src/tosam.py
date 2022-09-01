@@ -13,13 +13,10 @@ def main():
     )
     args = argparser.parse_args()
     # print(args)
-    i = 0
     for line in args.mas:
-        l = ['3M', '3M', '6M']
         chrom, read_name, read_str, pos = line.split('\t')
 
-        print(read_name.strip(), chrom.strip(), str(int(pos)+1), l[i], read_str.strip(), sep = '\t')
-        i+=1
+        print(read_name.strip(), chrom.strip(), str(int(pos)+1), cigar = f"{len(read_str.strip())}M", read_str.strip(), sep = '\t')
         # Output as Simple-SAM
 
 
